@@ -1,0 +1,378 @@
+/* =========================================
+   Variables: The LifeStyle Barber Palette
+   ========================================= */
+:root {
+    /* Modern PNW Vintage */
+    --charcoal: #2C2C2C;
+    --forest-green: #2A4035;
+    --leather-brown: #8C5A35;
+
+    /* Brand Colors */
+    --grey-violet: #7A7285;
+    --dark-blue: #162436;
+
+    /* Neutrals */
+    --text-light: #F4F4F4;
+    --text-dark: #1A1A1A;
+    --bg-light: #EBEBEB;
+    --white: #FFFFFF;
+
+    /* Animation */
+    --transition: all 0.3s ease-in-out;
+}
+
+/* =========================================
+   Global Resets & Typography
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    -webkit-font-smoothing: antialiased; /* Makes text look sharper on modern screens */
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem; /* Increased padding for more breathable, premium spacing */
+}
+
+/* =========================================
+   Sticky Navigation
+   ========================================= */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--charcoal);
+    color: var(--text-light);
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    border-bottom: 3px solid var(--leather-brown);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.brand-logo {
+    font-family: Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-light);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: var(--grey-violet);
+}
+
+/* =========================================
+   Buttons (Brand Color Integration)
+   ========================================= */
+.btn-book, .btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    text-align: center;
+}
+
+/* The Main Booking Button in Header */
+.btn-book {
+    background-color: var(--leather-brown);
+    color: var(--text-light);
+}
+
+.btn-book:hover {
+    background-color: var(--white);
+    color: var(--leather-brown);
+}
+
+/* Primary Call to Action in Hero */
+.btn-primary {
+    background-color: var(--grey-violet);
+    color: var(--text-light);
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--text-light);
+    color: var(--dark-blue);
+}
+
+/* Secondary Buttons for Team Section */
+.btn-secondary {
+    background-color: var(--dark-blue);
+    color: var(--text-light);
+    margin-top: 1rem;
+    /* Width: 100% removed so it doesn't stretch across the whole screen */
+}
+
+.btn-secondary:hover {
+    background-color: var(--grey-violet);
+    color: var(--white);
+}
+
+/* =========================================
+   Hero Section (Textured Lounge Vibe)
+   ========================================= */
+.hero-section {
+    background-color: var(--dark-blue);
+    background-image:
+        repeating-linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.02) 0px,
+            rgba(255, 255, 255, 0.02) 2px,
+            transparent 2px,
+            transparent 6px
+        ),
+        radial-gradient(circle at center, var(--charcoal) 0%, var(--dark-blue) 100%);
+    color: var(--text-light);
+    text-align: center;
+    padding: 12rem 2rem; /* Taller hero section for a grander entrance */
+    border-bottom: 5px solid var(--forest-green);
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    color: var(--text-light);
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+/* =========================================
+   Services Section
+   ========================================= */
+.services-section {
+    background-color: var(--bg-light);
+}
+
+.services-section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--dark-blue);
+    margin-bottom: 3.5rem;
+    font-weight: bold;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 6px;
+    border-left: 6px solid var(--forest-green);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.service-card.tier-1 {
+    border-left-color: var(--dark-blue);
+}
+
+.service-card.tier-2 {
+    border-left-color: var(--leather-brown);
+}
+
+.service-card h3 {
+    color: var(--charcoal);
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+/* =========================================
+   Team Section
+   ========================================= */
+.team-section {
+    background-color: var(--charcoal);
+    color: var(--text-light);
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3.5rem;
+    color: var(--text-light);
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.barber-profile {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    width: 340px;
+    border-top: 6px solid var(--grey-violet);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: var(--transition);
+}
+
+.barber-profile:hover {
+    transform: translateY(-5px);
+}
+
+.barber-profile h3 {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--dark-blue);
+}
+
+.barber-profile p {
+    margin-bottom: 1.5rem;
+    color: var(--charcoal);
+    font-style: italic;
+    font-size: 1.05rem;
+}
+
+/* =========================================
+   Location & Footer
+   ========================================= */
+.location-section {
+    text-align: center;
+    background-color: var(--bg-light);
+}
+
+.location-section h2 {
+    color: var(--forest-green);
+    font-size: 2.8rem;
+}
+
+.location-section address {
+    font-style: normal;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--charcoal);
+}
+
+.location-section p {
+    font-size: 1.15rem;
+    color: var(--dark-blue);
+}
+
+footer {
+    background-color: var(--dark-blue);
+    color: var(--grey-violet);
+    padding: 2.5rem 0;
+    text-align: center;
+    border-top: 3px solid var(--leather-brown);
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (Industry Standard)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    /* Stack the navigation nicely */
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Shrink the massive hero text so it fits on phone screens */
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-section {
+        padding: 6rem 1rem;
+    }
+
+    /* Adjust padding and font sizes for smaller screens */
+    .container {
+        padding: 3rem 1.5rem;
+    }
+
+    .services-section h2,
+    .team-section h2,
+    .location-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .service-card {
+        padding: 2rem;
+    }
+
+    .barber-profile {
+        width: 100%; /* Makes profiles take up full width of phone screen */
+    }
+}

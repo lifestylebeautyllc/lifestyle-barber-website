@@ -1,0 +1,116 @@
+LifeStyle Barber: Website Game Plan & Architecture (Part 2)
+1. Color Palette: "Modern PNW Vintage"
+The Blend: We are fusing rugged Pacific Northwest elements (deep forest greens, rich leather browns, and charcoal greys) with the modern LifeStyle brand colors (grey violet and dark blue).
+
+The Execution: Charcoal grey and forest green will serve as our foundational background and text colors to establish that masculine, grounded lounge vibe. The leather browns will act as warm accent tones (like borders or dividers), while the grey violet and dark blue will be used strategically for high-impact interactive elements, like the "Book Now" buttons and hover states.
+
+2. Site Structure: "Accessible Minimalism"
+The Strategy: A continuous-scroll single-page architecture featuring a "sticky" navigation bar that stays at the top of the screen as the user scrolls.
+
+The "Why": This is the exact sweet spot for your target demographics.
+
+For the tech-savvy locals: A smooth, single-page site feels modern, dynamic, and lightning-fast. It proves you are the forward-thinking barber they know you to be.
+
+For the older clientele: It completely removes friction. They don't have to hunt through complex drop-down menus or get lost on separate pages. They can simply click "Services" or "Book Matt" on the sticky header, and the screen will seamlessly glide down to exactly what they need. It is highly advanced under the hood, but beautifully simple on the surface.
+
+3. Service Hierarchy: "Precision & Tradition"
+Tier 1: Technical Mastery (The Hook). We lead with classic scissor cuts and tapered finishes. The copy here will lean into your academic tone, explicitly mentioning your cosmetology background, advanced shear work, texturizing, and weight-removal techniques for complex hair types. We establish total trust and competence immediately.
+
+Tier 2: The Barber Lounge Experience (The Tradition). Right below the cuts, we introduce the traditional staples: the hot towel, straight-razor shaves, and steaming men's facials. This reinforces the classic, relaxing atmosphere of the shop.
+
+Tier 3: The Interpersonal Element. A brief section detailing the vibe of the chair—great conversation, humble confidence, and a space to just breathe.
+--------------------------------------------------------------------------------------------------------------------
+PROJECT ANCHOR: LifeStyle Barber Digital Storefront
+THE BASICS
+
+Brand Name: LifeStyle Barber
+
+Location: 120 E Birch St, Suite 7, Walla Walla, WA 99362
+
+Contact/Booking Email: lifestylebarberwa@gmail.com
+
+The Mantra: Passion, Discipline, Execution.
+
+The Team: Michael (Licensed Barber & Cosmetologist) & Matt (Professional Barber).
+
+BRAND IDENTITY & TONE
+
+The Vibe: A true barber lounge. Manly scents, vintage aesthetics, and deep Pacific Northwest roots.
+
+The Tone: Academic, street-wise, humble, and confident.
+
+Color Palette ("Modern PNW Vintage"): * Foundations: Charcoal (#2C2C2C) and Forest Green (#2A4035).
+
+Accents: Leather Brown (#8C5A35).
+
+Brand Integration: Grey Violet (#7A7285) and Dark Blue (#162436).
+
+TECHNICAL ARCHITECTURE
+
+Development: Hand-coded HTML/CSS in VS Code for total quality control and hyper-local SEO optimization.
+
+Layout: Single-page, continuous-scroll architecture ("Accessible Minimalism") with a sticky navigation bar to serve both tech-savvy locals and older clientele without friction.
+
+SERVICE HIERARCHY & MESSAGING
+
+Tier 1 (Technical Mastery): Precision scissor cuts and tapered finishes. Highlighting the cosmetology background to manage difficult, curly, and chemically processed hair, as well as complex weight removal.
+
+Tier 2 (The Tradition): Signature hot towel treatments, straight-razor shaves, and hot steaming men's facials.
+
+Tier 3 (The Interpersonal Vibe): Highlighting the interpersonal effectiveness—great conversation and a relaxing space.
+
+CURRENT PROGRESS (As of Feb 22, 2026)
+
+index.html: Core semantic structure established with local SEO meta tags, sticky nav, hero section, tiered service cards, team grid, and location footer.
+
+style.css: Global variables defined for the custom color palette, responsive typography set, and structural layout styled.
+---------------------------------------------------------------------------------------------------------------------------------------
+PROJECT ANCHOR & PROGRESS REPORT: LifeStyle Barber Digital Storefront
+Date of Update: February 23, 2026
+
+1. THE FOUNDATION
+
+Brand Name: LifeStyle Barber
+
+Location: 120 E Birch St, Suite 7, Walla Walla, WA 99362
+
+Contact/Vagaro Account: lifestylebarberwa@gmail.com
+
+The Mantra: Passion, Discipline, Execution.
+
+The Team: Michael (Master Barber & Cosmetologist) & Matt (Professional Barber).
+
+2. BRAND IDENTITY & TONE
+
+The Vibe: A true barber lounge. Manly scents, vintage aesthetics, and deep Pacific Northwest roots.
+
+The Tone: Academic, street-wise, humble, and confident.
+
+Color Palette ("Modern PNW Vintage"): * Foundations: Charcoal (#2C2C2C) and Forest Green (#2A4035).
+
+Accents: Leather Brown (#8C5A35).
+
+Brand Integration: Grey Violet (#7A7285) and Dark Blue (#162436).
+
+3. TECHNICAL & MARKETING STRATEGY
+
+Development Workflow: Hand-coded Vanilla HTML/CSS in VS Code for total quality control, lightning-fast load times, and hyper-local SEO optimization. No heavy frameworks (like React/NPM) to keep the site purely focused on search dominance and walk-ins.
+
+Testing: Using "Live Server" extension in VS Code for real-time browser rendering upon saving (Ctrl + S).
+
+Image Strategy (The Hybrid Method): * Phase 1 (Current): Launch immediately using pure CSS textures, high-quality macro shots of barbering tools, and existing action shots of Michael cutting/styling to start indexing on Google immediately.
+
+Phase 2 (Future): Replace with 100% authentic shop photos once the Birch St location is dialed in, renaming all files with local SEO keywords (e.g., lifestyle-barber-straight-razor-walla-walla.jpg).
+
+4. CURRENT PROGRESS: COMPLETED
+
+style.css: Fully finalized. Global variables defined, responsive typography set, sticky nav styled, "Book Now" buttons integrated with brand colors, and a rich, textured vignette background engineered for the Hero section using pure CSS.
+
+index.html: Fully finalized semantic structure. Local SEO meta tags injected. All custom copywriting implemented (Tier 1 Technical Mastery, Tier 2 Traditional Experience, Tier 3 The Vibe). Sticky navigation linked dynamically to scroll to specific page sections.
+
+5. IMMEDIATE NEXT STEPS
+
+Connect Michael's "Book Now" buttons to the live Vagaro booking link.
+
+Source and insert Phase 1 imagery (high-quality macro barber tool shots and existing personal action shots).
+---------------------------------------------------------------------------------------------------------
