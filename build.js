@@ -9,19 +9,16 @@ let postsData = [];
 
 // 1. Loop through every file in the journal folder
 files.forEach(file => {
-    // Only process Markdown files
     if (file.endsWith('.md')) {
         const filePath = path.join(journalDir, file);
         const content = fs.readFileSync(filePath, 'utf-8');
 
-        // Extract the SEO "Front Matter" (title, description, date) at the top of the file
         const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
 
         if (match) {
             const frontMatter = match[1];
             const markdownBody = match[2];
 
-            // Pull out the specific data points
             const titleMatch = frontMatter.match(/title:\s*"(.*?)"/);
             const descMatch = frontMatter.match(/description:\s*"(.*?)"/);
             const dateMatch = frontMatter.match(/date:\s*(.*?)$/m);
@@ -31,11 +28,9 @@ files.forEach(file => {
             const date = dateMatch ? dateMatch[1].trim() : '';
 
             const htmlFileName = file.replace('.md', '.html');
-
-            // Convert the markdown text to HTML
             const htmlContent = marked.parse(markdownBody);
 
-            // 2. Build the individual article webpage
+            // 2. Build the individual article webpage (Now with Google Tracking)
             const postPage = `
 <!DOCTYPE html>
 <html lang="en">
@@ -44,6 +39,7 @@ files.forEach(file => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title} | LifeStyle Barber</title>
     <meta name="description" content="${description}">
+    <meta name="google-site-verification" content="ntqikwDeetkKiABwW6150jVagIAXfYHIsJCkyV-lf8k" />
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -70,16 +66,12 @@ files.forEach(file => {
 </body>
 </html>`;
 
-            // Save the compiled HTML file
             fs.writeFileSync(path.join(journalDir, htmlFileName), postPage);
-
-            // Save the data to build the directory card later
             postsData.push({ title, description, date, url: htmlFileName });
         }
     }
 });
 
-// Sort the posts from newest to oldest
 postsData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 // 3. Build the grid of cards for the Journal Directory
@@ -103,6 +95,7 @@ const directoryPage = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Journal | LifeStyle Barber</title>
     <meta name="description" content="Expert grooming insights, hair chemistry, and barbershop traditions.">
+    <meta name="google-site-verification" content="ntqikwDeetkKiABwW6150jVagIAXfYHIsJCkyV-lf8k" />
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -135,6 +128,18 @@ const directoryPage = `
 </body>
 </html>`;
 
-// Save the directory page
 fs.writeFileSync('./journal/index.html', directoryPage);
-console.log('Execution Complete: All posts compiled and Journal Directory fully updated.');
+
+// 5. Build the automated Sitemap for Google
+let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+sitemapXml += `  <url>\n    <loc>https://www.lifestylebarberwa.com/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>\n`;
+sitemapXml += `  <url>\n    <loc>https://www.lifestylebarberwa.com/journal/index.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
+
+postsData.forEach(post => {
+    sitemapXml += `  <url>\n    <loc>https://www.lifestylebarberwa.com/journal/${post.url}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>\n`;
+});
+
+sitemapXml += `</urlset>`;
+fs.writeFileSync('./sitemap.xml', sitemapXml);
+
+console.log('Execution Complete: Posts compiled, Directory updated, and Sitemap generated.');
