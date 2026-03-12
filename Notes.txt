@@ -114,3 +114,13 @@ Connect Michael's "Book Now" buttons to the live Vagaro booking link.
 
 Source and insert Phase 1 imagery (high-quality macro barber tool shots and existing personal action shots).
 ---------------------------------------------------------------------------------------------------------
+The Journal Setup Summary
+Strategic Purpose: Established the "Journal" section to act as your main SEO engine and a dedicated space to showcase your professional expertise in hair and skin chemistry.
+
+Folder Structure: Created a dedicated /journal folder in your project directory to keep all educational content organized and separate from the main site files.
+
+Journal Homepage: Built an index.html file inside the /journal folder. This acts as the main hub or "blog roll" where all your individual articles will be listed.
+
+Site Navigation: Updated the main website's top navigation bar to include a direct link to "The Journal" so clients can easily find it.
+
+First Articles Prepped: We laid the groundwork for your first posts, specifically creating the HTML file for "proper skin preparation" (which is visible in your VS Code sidebar) and planning a future deep-dive post on "hard water chemistry."

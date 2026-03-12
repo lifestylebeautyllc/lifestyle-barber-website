@@ -246,6 +246,42 @@ a {
 }
 
 /* =========================================
+   Gallery Section (The Portfolio)
+   ========================================= */
+.gallery-section {
+    background-color: var(--white);
+    border-top: 3px solid var(--forest-green);
+}
+
+.gallery-section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--dark-blue);
+    margin-bottom: 3.5rem;
+    font-weight: bold;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: var(--transition);
+}
+
+.gallery-img:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* =========================================
    Team Section
    ========================================= */
 .team-section {
@@ -364,7 +400,8 @@ footer {
 
     .services-section h2,
     .team-section h2,
-    .location-section h2 {
+    .location-section h2,
+    .gallery-section h2 {
         font-size: 2.2rem;
     }
 
@@ -374,5 +411,14 @@ footer {
 
     .barber-profile {
         width: 100%; /* Makes profiles take up full width of phone screen */
+    }
+
+    /* Gallery Mobile Adjustments */
+    .gallery-grid {
+        gap: 1rem;
+    }
+
+    .gallery-img {
+        height: 300px;
     }
 }
